@@ -1,6 +1,7 @@
 from Scripts.CountsCheck import CountsCheck
 from Scripts.DuplicatesCheck import DuplicatesCheck
 from Scripts.UniqueCheck import UniqueCheck
+from Scripts.NotNullCheck import NotNullCheck
 
 
 print("---------------------------ETL VALIDATION UTILITY---------------------------")
@@ -31,6 +32,11 @@ while(1):
         target_uniq_query = input("Enter Target Unique3 Query")
         uc = UniqueCheck(source_uniq_query, target_uniq_query)
         uc.unique_validation()
+    elif (check == "4"):
+        source_notnull_query = input("Enter Source Unique Query")
+        target_notnull_query = input("Enter Target Unique3 Query")
+        nc = NotNullCheck(source_notnull_query, target_notnull_query)
+        nc.notnull_validation()
 
 
 
